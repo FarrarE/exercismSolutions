@@ -3,10 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const value = (list) => {
-  let total = "";
-  list.slice(0,2).map(item => total += colorCode(item));
-  return Number(total);
+export const value = (list) => {  
+  let result = list.slice(0,2).map(item => colorCode(item));
+  return Number(result.join(''));
 };
 
 export const colorCode = (color) => COLORS.indexOf(color);
