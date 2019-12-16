@@ -4,8 +4,14 @@
 //
 
 export const value = (list) => {  
-  let result = list.slice(0,2).map(item => colorCode(item));
-  return Number(result.join(''));
+  let result;
+
+  if(list.length === 1)
+    result = colorCode(list[0]);
+  else 
+    result = colorCode(list[0]) * 10 + colorCode(list[1]);
+
+  return result;
 };
 
 export const colorCode = (color) => COLORS.indexOf(color);
