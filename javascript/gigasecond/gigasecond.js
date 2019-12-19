@@ -3,12 +3,10 @@
 // convenience to get you started writing code faster.
 //
 
+const GIGASECOND =  Math.pow(10, 9);
+
 export const gigasecond = (date) => {
   let newDate = new Date(date);
-  let days = 11574;
-  let seconds = 2800;
-
-  newDate.setDate(newDate.getDate() + days);
-  newDate.setSeconds(newDate.getSeconds() + seconds);
+  newDate.setUTCSeconds(newDate.getUTCSeconds() + GIGASECOND);
   return newDate
 };
